@@ -1,0 +1,10 @@
+<button class="button" (click)="getCurrentExchangeRate()">get exchange Rate</button>
+<ul>
+    <li *ngFor="let item of gotResul">
+        <p>{{item.currencyCodeA}}</p>
+        <p>{{item.currencyCodeB}}</p>
+        <p>{{item.rateBuy}}</p>
+        <p>{{item.rateSell}}</p>
+        <p>{{item.rateCross}}</p>
+    </li>
+</ul> 
