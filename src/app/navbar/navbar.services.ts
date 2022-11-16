@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IExchangeRate } from '../exchange-rate/exchangeRate';
+import { IExchangeRate } from '../exchange-rate/IExchangeRate';
 
 @Injectable({
     providedIn: 'root'
