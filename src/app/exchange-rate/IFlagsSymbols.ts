@@ -1,7 +1,5 @@
 export interface InternationalFormat {
-    code: number;
-    name: string,
-    symbol: string,
+     code: number; name: string, symbol: string,
 }
 export const ARR_INTERNATIONAL_FORMAT: InternationalFormat[] = [
     { code: 826, name: "GBP", symbol: '🇬🇧' },

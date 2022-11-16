@@ -1,7 +1,11 @@
 export interface IExchangeRate {
+    currencyCodeA: number,
+    currencyCodeB: number,
+    date:number,
+
     name: string,
     symbol: string,
-    code: number,
     rateSell: Float32Array,
     rateBuy: Float32Array,
+    rateCross: Float32Array
 };

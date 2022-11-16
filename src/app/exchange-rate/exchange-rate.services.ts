@@ -10,7 +10,7 @@ export class ExchangeRateServices {
     constructor(private http: HttpClient) {
 
     }
-
+    
     getExchangeRate(): Observable<IExchangeRate[]> {
         return this.http.get<IExchangeRate[]>('https://api.monobank.ua/bank/currency');
     }
