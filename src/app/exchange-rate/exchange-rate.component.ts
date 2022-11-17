@@ -20,8 +20,7 @@ export class ExchangeRateComponent implements OnInit {
 
       for (let i = 0; i < this.arrResult.length; i++) {
         for (let j = 0; j < ARR_INTERNATIONAL_FORMAT.length; j++) {
-          if (this.arrResult[i].currencyCodeA == ARR_INTERNATIONAL_FORMAT[j].code)
-          {
+          if (this.arrResult[i].currencyCodeA == ARR_INTERNATIONAL_FORMAT[j].code) {
             this.arrResult[i].name = ARR_INTERNATIONAL_FORMAT[j].name;
             this.arrResult[i].symbol = ARR_INTERNATIONAL_FORMAT[j].symbol;
           }

@@ -7,7 +7,6 @@ export const ARR_INTERNATIONAL_FORMAT: InternationalFormat[] = [
     { code: 978, name: "EUR", symbol: '🇪🇺' },
     { code: 392, name: "JPY", symbol: '🇯🇵' },
     { code: 156, name: "CNY", symbol: '🇨🇳' },
-    { code: 124, name: "CAD", symbol: '🇨🇦' },
     { code: 980, name: "UAH", symbol: '🇺🇦' },
     { code: 752, name: "SEK", symbol: '🇸🇪' },
 ]
