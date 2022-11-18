@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IExchangeRate } from '../exchange-rate/IExchangeRate';
+import { IExchangeRate } from '../exchange-rate/Interfaces/IExchangeRate';
 import { NavbarService } from './navbar.services';
 
 @Component({

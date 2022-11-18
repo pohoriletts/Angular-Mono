@@ -1,17 +1,31 @@
-<button class="button" (click)="getCurrentExchangeRate()">get</button>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+
+<button class="update-button" (click)="getCurrentData()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+    class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
+    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+  </svg>
+</button>
 
 <table>
-    <thead>
-      <th>Symbol</th> <th>ISO</th> <th>Name</th> <th>Rate Buy</th> <th>Rate sell</th> <th>Rate cross</th>
-    </thead>
-    <tbody *ngFor="let item of arrResult">
-        <tr>
-            <td>{{item.symbol}}</td>
-            <td>{{item.currencyCodeA}}</td>
-            <td>{{item.name}}</td>   
-            <td>{{item.rateBuy}}</td>   
-            <td>{{item.rateSell}}</td>
-            <td>{{item.rateCross}}</td>
-        </tr>      
-      </tbody>
+  <thead>
+    <th>ISO</th>
+    <th>Flag</th>
+    <th>Name</th>
+    <th>Rate Buy</th>
+    <th>Rate sell</th>
+    <th>Rate cross</th>
+  </thead>
+  <tbody *ngFor="let item of arrResult">
+    <tr>
+      <td>{{item.currencyCodeA}}</td>
+      <td><img class="flag-img" src="{{item.flag}}"></td>
+      <td>{{item.shortName}}</td>
+      <td>{{item.rateBuy}}</td>
+      <td>{{item.rateSell}}</td>
+      <td>{{item.rateCross}}</td>
+    </tr>
+  </tbody>
 </table>

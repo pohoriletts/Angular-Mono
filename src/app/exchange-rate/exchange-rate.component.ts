@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ExchangeRateServices } from './exchange-rate.services';
-import { IExchangeRate } from './IExchangeRate';
-import { ARR_INTERNATIONAL_FORMAT } from './IFlagsSymbols';
-
+import { IExchangeRate } from './Interfaces/IExchangeRate';
+import { InternationalFormat } from './Interfaces/IInternationalFormat';
+import { ExchangeRateServices } from './Services/exchange-rate.services';
+import { InternationalFormatServices } from './Services/international-fomat.services';
 
 @Component({
   selector: 'app-exchange-rate',
@@ -11,24 +11,30 @@ import { ARR_INTERNATIONAL_FORMAT } from './IFlagsSymbols';
 })
 export class ExchangeRateComponent implements OnInit {
 
-  constructor(private exchangeRateServices: ExchangeRateServices) { }
+  constructor(private exchangeRateServices: ExchangeRateServices, private internationalFormatServices: InternationalFormatServices) { }
   arrResult: IExchangeRate[] = [];
+  arrInternationalFormat: InternationalFormat[] = [];
 
-  getCurrentExchangeRate(): void {
+  num: number = 0;
+  getCurrentData(): void {
     this.exchangeRateServices.getExchangeRate().subscribe(result => {
       this.arrResult = result;
+    });
 
-      for (let i = 0; i < this.arrResult.length; i++) {
-        for (let j = 0; j < ARR_INTERNATIONAL_FORMAT.length; j++) {
-          if (this.arrResult[i].currencyCodeA == ARR_INTERNATIONAL_FORMAT[j].code) {
-            this.arrResult[i].name = ARR_INTERNATIONAL_FORMAT[j].name;
-            this.arrResult[i].symbol = ARR_INTERNATIONAL_FORMAT[j].symbol;
+    this.internationalFormatServices.getInternationalFormat().subscribe(result => {
+      this.arrInternationalFormat = result;
+
+      for (let index = 0; index < this.arrResult.length; index++) {
+        for (; this.num < this.arrInternationalFormat.length; this.num++) {
+          if (this.arrResult[index].currencyCodeA == this.arrInternationalFormat[this.num].isOcode) {
+            this.arrResult[index].flag = this.arrInternationalFormat[this.num].flag;
+            this.arrResult[index].shortName = this.arrInternationalFormat[this.num].shortName;
           }
         }
+        this.num = 0;
       }
     });
   }
   ngOnInit(): void {
   }
-
 }
