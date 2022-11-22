@@ -29,6 +29,7 @@ export class ExchangeRateComponent implements OnInit {
           if (this.arrResult[index].currencyCodeA == this.arrInternationalFormat[this.num].isOcode) {
             this.arrResult[index].flag = this.arrInternationalFormat[this.num].flag;
             this.arrResult[index].shortName = this.arrInternationalFormat[this.num].shortName;
+            continue;
           }
         }
         this.num = 0;
