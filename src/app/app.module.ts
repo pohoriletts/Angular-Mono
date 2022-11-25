@@ -7,16 +7,20 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ExchangeRateComponent
+    ExchangeRateComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule
   ],
