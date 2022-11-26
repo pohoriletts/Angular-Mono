@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IExchangeRate } from '../exchange-rate/Interfaces/IExchangeRate';
-import { NavbarService } from './navbar.services';
+import { AccountService } from '../Account/account-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +7,10 @@ import { NavbarService } from './navbar.services';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor() { }
+  constructor(public accountService: AccountService) { }
+  signOut(): void {
+    this.accountService.signOut();
+  }
   ngOnInit(): void {
   }
 }

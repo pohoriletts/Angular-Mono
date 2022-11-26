@@ -3,31 +3,32 @@
   left: 0;
   width: 100%;
   position: fixed;
+  display: flex;
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.714);
+  background-color: rgba(16, 15, 15, 0.746);
 }
 
-.navbar a {
-  float: left;
-  display: block;
+.navbar a,
+.right {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  animation : none;
-  animation-delay : 0;
+  animation: none;
+  animation-delay: 0;
 }
 
+.right {
+  margin-left: auto;
+}
 
 @media (prefers-color-scheme: dark) {
   .navbar a {
     background:
-    linear-gradient(
-        to right,
+      linear-gradient(to right,
         black,
-        black
-      ),
+        black),
       linear-gradient(to right,
         rgba(255, 0, 0, 1),
         rgba(255, 0, 180, 1),
@@ -37,7 +38,7 @@
     background-repeat: no-repeat;
     transition: background-size 400ms;
   }
-  
+
   .navbar a:hover {
     cursor: pointer;
     background-size: 0 3px, 100% 3px;

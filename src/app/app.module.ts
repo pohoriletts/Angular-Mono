@@ -1,28 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material/table';
+import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { NavbarComponent } from './navbar/navbar.component';
+import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SignUpComponent } from './Account/sign-up/sign-up.component';
+import { SignInComponent } from './Account/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ExchangeRateComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SignUpComponent,
+    SignUpComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

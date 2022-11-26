@@ -2,5 +2,13 @@
     <a>Home</a>
     <a>News</a>
     <a>Contact</a>
-    <a routerLink="/exchange-rate">Exchange Rate</a>
+    <a routerLink="/ExchangeRate">Exchange Rate</a>
+
+    <div class="right" *ngIf="accountService.isAuthenticated()">
+        <button (click)="signOut()">Sign Out</button>
+    </div>
+    <div class="right" *ngIf="!accountService.isAuthenticated()">
+        <a routerLink="/SignIn">Sign In</a>
+        <a routerLink="/SignUp">Sign Up</a>
+    </div>
 </div>

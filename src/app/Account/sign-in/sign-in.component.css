@@ -1,0 +1,11 @@
+.signInForm{
+    margin-top: 100px;
+}
+h2 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

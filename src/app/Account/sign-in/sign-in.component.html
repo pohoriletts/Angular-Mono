@@ -1,0 +1,12 @@
+<div class="signUpForm">
+    <h2>sign in your account</h2>
+    <form [formGroup]="signInForm" (ngSubmit)="signIn()" >
+        <p>Enter your email</p>
+        <input type="email" placeholder="pat@example.com" formControlName="email">
+
+        <p>Enter your password</p>
+        <input type="password" formControlName="password">
+        <button type="submit">Sign in</button>
+        <button routerLink="/SignUp">Sign Up</button>
+    </form>
+</div>
