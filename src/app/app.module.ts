@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SignUpComponent } from './Account/sign-up/sign-up.component';
 import { SignInComponent } from './Account/sign-in/sign-in.component';
+import { JwtServiceInterceptor } from './Account/jwt-service.interceptor';
 
 @NgModule({
   declarations: [
