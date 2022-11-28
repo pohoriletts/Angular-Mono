@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS,HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
+import { NavbarComponent } from './Navbar/navbar.component';
+import { ExchangeRateComponent } from './Exchange-rate/exchange-rate.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './Not-found/not-found.component';
 import { SignUpComponent } from './Account/sign-up/sign-up.component';
 import { SignInComponent } from './Account/sign-in/sign-in.component';
 import { JwtServiceInterceptor } from './Account/jwt-service.interceptor';
+import { TransactionsComponent } from './Transactions/transactions.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { JwtServiceInterceptor } from './Account/jwt-service.interceptor';
     NotFoundComponent,
     SignUpComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
+    TransactionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,11 @@ import { JwtServiceInterceptor } from './Account/jwt-service.interceptor';
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtServiceInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

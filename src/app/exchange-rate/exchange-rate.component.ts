@@ -16,7 +16,8 @@ export class ExchangeRateComponent implements OnInit {
   arrInternationalFormat: InternationalFormat[] = [];
 
   num: number = 0;
-  getCurrentData(): void {
+
+  ngOnInit(): void {
     this.exchangeRateServices.getExchangeRate().subscribe(result => {
       this.arrResult = result;
     });
@@ -35,7 +36,5 @@ export class ExchangeRateComponent implements OnInit {
         this.num = 0;
       }
     });
-  }
-  ngOnInit(): void {
   }
 }
