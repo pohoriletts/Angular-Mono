@@ -8,39 +8,21 @@
   background-color: rgba(16, 15, 15, 0.746);
 }
 
-.navbar a,
-.right {
+.navbar a {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  cursor: pointer;
   animation: none;
   animation-delay: 0;
 }
 
-.right {
+.navbar a:last-of-type {
+  margin: 9px;
+  padding: 5px 12px;
   margin-left: auto;
-}
-
-@media (prefers-color-scheme: dark) {
-  .navbar a {
-    background:
-      linear-gradient(to right,
-        black,
-        black),
-      linear-gradient(to right,
-        rgba(255, 0, 0, 1),
-        rgba(255, 0, 180, 1),
-        rgba(0, 100, 200, 1));
-    background-size: 100% 3px, 0 3px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-  }
-
-  .navbar a:hover {
-    cursor: pointer;
-    background-size: 0 3px, 100% 3px;
-  }
+  background-color: rgb(121 71 250);
+  border-radius: 20px;
 }

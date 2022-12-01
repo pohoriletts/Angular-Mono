@@ -1,15 +1,9 @@
 <div class="navbar">
-    <a>Home</a>
-    <a>News</a>
-    <a>Contact</a>
-    <a routerLink="/Transactions">Transactions</a>
-    <a routerLink="/ExchangeRate">Exchange Rate</a>
-
-    <div class="right" *ngIf="accountService.isAuthenticated()">
-        <button (click)="signOut()">Sign Out</button>
-    </div>
-    <div class="right" *ngIf="!accountService.isAuthenticated()">
-        <a routerLink="/SignIn">Sign In</a>
-        <a routerLink="/SignUp">Sign Up</a>
-    </div>
+    <a routerLink="/Home">Home</a>
+    <a routerLink="/News">News</a>
+    <a routerLink="/Contact">Contact</a>
+    <a *ngIf="accountService.isAuthenticated()" routerLink="/Transactions">Transactions</a>
+    <a *ngIf="accountService.isAuthenticated()" routerLink="/ExchangeRate">Exchange Rate</a>
+    <a *ngIf="!accountService.isAuthenticated()"routerLink="/SignIn">Sign In</a>
+    <a *ngIf="accountService.isAuthenticated()" (click)="signOut()">Sign Out</a>
 </div>

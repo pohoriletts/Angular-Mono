@@ -7,24 +7,24 @@ import { ISignUpModel } from '../user';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['../signInOut.css']
 })
 export class SignUpComponent implements OnInit {
   hide = true;
-  sigUpForm: FormGroup;
+  signUpForm: FormGroup;
 
   constructor(private fb: FormBuilder, private accountService: AccountService, private router: Router) {
-    this.sigUpForm = fb.group({
+    this.signUpForm = fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
   signUp(): void {
-    if (this.sigUpForm.invalid) {
+    if (this.signUpForm.invalid) {
       alert("Invalid data!");
       return;
     }
-    const user: ISignUpModel = this.sigUpForm.value;
+    const user: ISignUpModel = this.signUpForm.value;
     this.accountService.signUp(user).subscribe(() => {
       this.router.navigateByUrl('/ExchangeRate');
     },

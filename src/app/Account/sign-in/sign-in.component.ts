@@ -7,7 +7,7 @@ import { ISignUpModel } from '../user';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  styleUrls: ['../signInOut.css']
 })
 export class SignInComponent implements OnInit {
   hide = true;

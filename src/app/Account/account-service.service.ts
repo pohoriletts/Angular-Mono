@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { ISigInResponse, ISignInModel, ISignUpModel } from './user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
   userKey = 'user-token'
 
   signIn(user: ISignInModel): Observable<ISigInResponse> {
@@ -17,7 +18,8 @@ export class AccountService {
     return this.http.post('http://mono.somee.com/SignUp', { email: user.email, password: user.password });
   };
   signOut(): void {
-    this.http.post('http://mono.somee.com/SignOut', null).subscribe(res => {
+    this.http.post('http://mono.somee.com/SignOut', null).subscribe(() => {
+      this.router.navigateByUrl('/Home');
       this.removeToken();
     })
   };
