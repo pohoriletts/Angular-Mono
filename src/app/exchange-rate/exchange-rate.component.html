@@ -1,49 +1,13 @@
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
-
-<button class="update-button" (click)="ngOnInit()">
-  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
-    class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
-    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
-  </svg>
-</button>
-
 <div class="exhange-rate-component">
-
-  <p class="text-center">Курс валют</p>
   <div class="block">
-    Основні курси
-    <table class="table">
+    Payment systems courses
+    <table>
       <thead>
         <tr>
-          <td>Валюта</td>
-          <td></td>
-          <td>Купівля</td>
-          <td>Продаж</td>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td></td>
-          <td>
-            <p>USA</p>
-          </td>
-          <td>34.4444</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="block">
-    Курси платіжних систем
-    <table class="table">
-      <thead>
-        <tr>
-          <td>Валюта</td>
-          <td></td>
-          <td>Продаж</td>
+          <td>Flag</td>
+          <td>Currency</td>
+          <td>Buy</td>
+          <td>Sell / Cross</td>
         </tr>
       </thead>
 
@@ -54,9 +18,18 @@
             <p>{{item.shortName}}</p>
             <p>{{item.fullName}}</p>
           </td>
-          <td>{{item.rateCross}}</td>
+          <td>{{item.rateBuy}}</td>
+          <td>{{item.rateSell}}{{item.rateCross}}</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+<button class="update-button" (click)="ngOnInit()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+    class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
+    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+  </svg>
+</button>

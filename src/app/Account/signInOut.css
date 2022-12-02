@@ -15,22 +15,6 @@ h2 {
     width: 100%;
 }
 
-@media screen and (min-width:900px) {
-    .signInOut-block {
-        width: 40%;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .signInOut-block {
-        background-color: rgb(30, 30, 30);
-    }
-
-    .field__input {
-        color: white;
-    }
-}
-
 .ha-screen-reader {
     width: var(--ha-screen-reader-width, 1px);
     height: var(--ha-screen-reader-height, 1px);
@@ -152,4 +136,45 @@ h2 {
 .field {
     --fieldBorderColor: #D1C4E9;
     --fieldBorderColorActive: rgb(108 58 222);
+}
+
+.fill-button,
+.only-text-button {
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    display: block;
+    margin: 15px auto;
+}
+
+.only-text-button {
+    font-size: 17px;
+    background-color: transparent;
+    color: rgb(108 58 222);
+}
+
+.fill-button {
+    font-size: 20px;
+    color: white;
+    padding: 7px 55px;
+    border-radius: 10px;
+    background-color: rgb(108 58 222);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (min-width:900px) {
+    .signInOut-block {
+        width: 40%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .signInOut-block {
+        background-color: rgb(30, 30, 30);
+    }
+
+    .field__input {
+        color: white;
+    }
 }

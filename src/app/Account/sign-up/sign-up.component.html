@@ -1,6 +1,6 @@
 <div class="signInOut-block">
     <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/db66fb141267467.625051dc39f76.png">
-    <h2>Sign Up</h2>
+    <h2>Creating Account</h2>
     <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
         <div class="field field_v1">
             <label for="email" class="ha-screen-reader">Email</label>
@@ -18,7 +18,7 @@
             </span>
         </div>
 
-        <button type="submit">Sign Up</button>
-        <button routerLink="/SignIn">Sign In</button>
+        <button class="fill-button" type="submit">Create</button>
+        <button class="only-text-button" routerLink="/SignIn">Sign In</button>
     </form>
 </div>

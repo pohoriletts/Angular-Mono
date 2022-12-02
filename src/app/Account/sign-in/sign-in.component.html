@@ -4,7 +4,8 @@
     <form [formGroup]="signInForm" (ngSubmit)="signIn()">
         <div class="field field_v1">
             <label for="email" class="ha-screen-reader">Email</label>
-            <input id="email" class="field__input" type="email" formControlName="email"placeholder="taras.shevchenko@gmail.com">
+            <input id="email" class="field__input" type="email" formControlName="email"
+                placeholder="taras.shevchenko@gmail.com">
             <span class="field__label-wrap" aria-hidden="true">
                 <span class="field__label">Email</span>
             </span>
@@ -18,7 +19,7 @@
             </span>
         </div>
 
-        <button type="submit">Sign in</button>
-        <button routerLink="/SignUp">Sign Up</button>
+        <button class="fill-button" type="submit">Sign in</button>
+        <button class="only-text-button" routerLink="/SignUp">Create Account</button>
     </form>
 </div>
