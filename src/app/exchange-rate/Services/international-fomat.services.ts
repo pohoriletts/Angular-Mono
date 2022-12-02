@@ -9,8 +9,7 @@ import { InternationalFormat } from '../Interfaces/IInternationalFormat';
 export class InternationalFormatServices {
     constructor(private http: HttpClient) {}
 
-    getInternationalFormat(): Observable<InternationalFormat[]> {
-        console.log(this.http.get<InternationalFormat[]>('http://getcurrency.somee.com/all'));
-        return this.http.get<InternationalFormat[]>('http://getcurrency.somee.com/all');
+    getISOcodes(): Observable<InternationalFormat[]> {
+        return this.http.get<InternationalFormat[]>('http://isocodes.somee.com/all');
     }
 }

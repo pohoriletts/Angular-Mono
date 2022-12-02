@@ -22,7 +22,7 @@ export class ExchangeRateComponent implements OnInit {
       this.arrResult = result;
     });
 
-    this.internationalFormatServices.getInternationalFormat().subscribe(result => {
+    this.internationalFormatServices.getISOcodes().subscribe(result => {
       this.arrInternationalFormat = result;
 
       for (let index = 0; index < this.arrResult.length; index++) {
