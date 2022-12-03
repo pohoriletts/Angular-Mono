@@ -1,3 +1,5 @@
+![alt text](https://github.com/pohoriletts/Angular-Mono/blob/master/src/images/view.png)
+
 # Mono
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
