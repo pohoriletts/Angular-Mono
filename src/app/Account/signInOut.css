@@ -171,7 +171,7 @@ h2 {
 
 @media (prefers-color-scheme: dark) {
     .signInOut-block {
-        background-color: rgb(30, 30, 30);
+            
     }
 
     .field__input {

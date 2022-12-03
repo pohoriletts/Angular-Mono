@@ -14,6 +14,9 @@ import { SignUpComponent } from './Account/sign-up/sign-up.component';
 import { SignInComponent } from './Account/sign-in/sign-in.component';
 import { JwtServiceInterceptor } from './Account/jwt-service.interceptor';
 import { TransactionsComponent } from './Transactions/transactions.component';
+import { HomeComponent } from './Home/home.component';
+import { NewsComponent } from './News/news.component';
+import { ContactComponent } from './Contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { TransactionsComponent } from './Transactions/transactions.component';
     SignUpComponent,
     SignInComponent,
     TransactionsComponent,
+    HomeComponent,
+    NewsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

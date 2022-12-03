@@ -1,0 +1,30 @@
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: UpAndDown 1s infinite alternate;
+    -webkit-animation: UpAndDown 1s infinite alternate;
+}
+
+@-webkit-keyframes UpAndDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes UpAndDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
