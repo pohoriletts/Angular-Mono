@@ -57,6 +57,7 @@ table tbody tr td p {
 
 table tbody tr td p:last-of-type {
     color: rgb(162, 162, 162);
+    font-size: 15px;
 }
 
 table tbody tr td:first-child {

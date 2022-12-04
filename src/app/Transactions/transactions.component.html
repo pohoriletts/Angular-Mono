@@ -1,27 +1,25 @@
 <table>
-    <thead>
-      <tr>
-        <td>Id</td>
-        <td>sum</td>
-        <td>typeTransaction</td>
-        <td>date</td>
-        <td>Sender</td>
-        <td>recipientName</td>
-        <td>description</td>
-      </tr>
-    </thead>
-
-    <tbody *ngFor="let item of transactions">
-      <tr>
-        <td>{{item.id}}</td>
-        <td>{{item.sum}}</td>
-        <td>{{item.typeTransaction}}</td>
-        <td>{{item.dateTime}}</td>
-        <td>{{item.senderName}}</td>
-        <td>{{item.recipientName}}</td>
-        <td>{{item.description}}</td>
-
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Sum</td>
+      <td>Type of Transaction</td>
+      <td>Date</td>
+      <td>Sender</td>
+      <td>Recipient Name</td>
+      <td>Description</td>
     </tr>
-      
-    </tbody>
-  </table>
+  </thead>
+
+  <tbody *ngFor="let item of transactions">
+    <tr>
+      <td>{{item.id}}</td>
+      <td>{{item.sum}}</td>
+      <td>{{item.typeTransaction}}</td>
+      <td>{{item.dateTime}}</td>
+      <td>{{item.senderName}}</td>
+      <td>{{item.recipientName}}</td>
+      <td>{{item.description}}</td>
+    </tr>
+  </tbody>
+</table>
