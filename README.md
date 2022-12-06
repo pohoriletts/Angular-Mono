@@ -1,4 +1,4 @@
-![alt text](https://github.com/pohoriletts/Angular-Mono/blob/master/src/images/view.png)
+![alt text](https://github.com/pohoriletts/Angular-Mono/blob/master/src/images/Preview%20Img.png)
 
 # Mono
 
